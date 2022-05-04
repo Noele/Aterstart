@@ -1,3 +1,6 @@
+# IMPORTANT NOTICE
+## Theres a good chance this program will get you suspended from Aternos, Please don't use it.
+
 # Aterstart
 A discord bot for starting an Aternos server
 
