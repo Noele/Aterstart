@@ -37,10 +37,11 @@ class Loader:
             exit(404)
 
     def hash_data(self, aternos):
-        self.data["password"] = aternos.md5encode(self.data["password"])
-        self.data["hashed"] = True
-        with open(self.path, "w") as jsonFile:
-            json.dump(self.data, jsonFile)
+        if not get_hashed():
+            self.data["password"] = aternos.md5encode(self.data["password"])
+            self.data["hashed"] = True
+            with open(self.path, "w") as jsonFile:
+                json.dump(self.data, jsonFile)
 
     def get_hashed(self):
         return self.data["hashed"]
